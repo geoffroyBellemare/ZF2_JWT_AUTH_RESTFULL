@@ -6,7 +6,6 @@ nbproject
 .idea
 .project
 .settings
-composer.lock
 vendor/
 !vendor/README.md
 !vendor/ZF2/
@@ -18,7 +17,7 @@ vendor/
 Icon
 
 # Thumbnails
-._*
+
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
@@ -35,7 +34,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-composer.phar
+
 vendor/
 
 # Local configs
@@ -46,15 +45,9 @@ config/autoload/*.local.php
 
 # Data
 data/logs/
-data/cache/
+#data/cache/
 data/sessions/
 data/tmp/
 temp/
 
-#Doctrine 2
-data/DoctrineORMModule/Proxy/
-data/DoctrineORMModule/cache/
-
-# Legacy ZF1
-demos/
 extras/documentation
