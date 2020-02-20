@@ -1,1 +1,3 @@
-ZF2 Skeleton No VirtualHost And JWT Authentication 
+ZF2 Skeleton No VirtualHost And JWT RestFull Authentication
+
+labo...
