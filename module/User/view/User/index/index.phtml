@@ -1,0 +1,45 @@
+
+<?php
+/**
+ * @var \Zend\Form\Form $form
+ */
+$form = $this->form;
+
+/**
+ * @var \Zend\Form\Fieldset $fieldSet
+ */
+
+$fieldSet = $form->get('register_fieldset');
+
+$first_name = $fieldSet->get('first_name');
+$last_name  = $fieldSet->get('last_name');
+$email = $fieldSet->get('email');
+$password = $fieldSet->get('password');
+$repeatPassword = $fieldSet->get('repeatPassword');
+$submit = $form->get('submit');
+
+
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+<div class="form-group" >
+    <?php echo $this->formRow($first_name); ?>
+</div>
+<div class="form-group" >
+    <?php echo $this->formRow($last_name); ?>
+</div>
+<div class="form-group" >
+    <?php echo $this->formRow($email); ?>
+</div>
+<div class="form-group" >
+    <?php echo $this->formRow($password); ?>
+</div>
+<div class="form-group" >
+    <?php echo $this->formRow($repeatPassword); ?>
+</div>
+
+<div>
+    <?php echo $this->formRow($submit) ?>
+</div>
+<?php echo $this->form()->closeTag(); ?>

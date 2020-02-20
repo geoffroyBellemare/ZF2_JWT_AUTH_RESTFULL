@@ -1,0 +1,41 @@
+
+<?php
+/**
+ * @var \Zend\Form\Form $form
+ */
+$form = $this->form;
+$googleAuthUrl = $this->googleAuthUrl;
+
+/**
+ * @var \Zend\Form\Fieldset $fieldSet
+ */
+
+$fieldSet = $form->get('login_field_set');
+
+$email = $fieldSet->get('email');
+$password = $fieldSet->get('password');
+
+$submit = $form->get('submit');
+
+
+$form->prepare();
+
+echo $this->form()->openTag($form);
+?>
+
+<div class="form-group" >
+    <?php echo $this->formRow($email); ?>
+</div>
+<div class="form-group" >
+    <?php echo $this->formRow($password); ?>
+</div>
+<div>
+    <?php echo $this->formRow($submit) ?>
+</div>
+<?php echo $this->form()->closeTag(); ?>
+<br/>
+<div class="row">
+    <div class="col-md-10 glyphicon-align-center">
+        <img src="img/zf2-logo.png" onclick="window.location = '<?php echo $googleAuthUrl; ?>'" />
+    </div>
+</div>
